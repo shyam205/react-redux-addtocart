@@ -163,6 +163,7 @@
 }
 .header_cart_box{
   position: fixed;
+  width: 460px;
   background-color: white;
   height: 100vh;
   top: 0;
