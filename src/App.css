@@ -321,3 +321,14 @@
 .product_quantity button:hover{
   background-color: rgb(205 176 135); 
 }
+
+.remove_cart_item{
+  margin-top: 10px;
+  display: flex;
+  justify-content: right;
+  text-decoration: underline;
+}
+.remove_cart_item p{
+  cursor: pointer;
+  width: max-content;
+}

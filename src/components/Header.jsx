@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { incrementcartitem,decrementcartitem } from '../redux/actions/productsAction';
+import { incrementcartitem,decrementcartitem, removecartitem } from '../redux/actions/productsAction';
 
 function Header() {
     const cartproducts = useSelector(state => state.cartreducer.cartproducts)
@@ -29,6 +29,10 @@ function Header() {
     const handleRemoveItemoncart = (e,product) => {
         e.preventDefault();
         dispatch(decrementcartitem(product))
+    }
+
+    const handleDeleteItem = (product) => {
+        dispatch(removecartitem(product))
     }
 
   return (
@@ -80,6 +84,7 @@ function Header() {
                         <div className='cartproduct_box' key={id}>
                             <div>
                                 <p className='cartproduct_title'>{product.title}</p>
+                                <div className='remove_cart_item'><p onClick={() => handleDeleteItem(product)}>Remove from cart</p></div>
                                 <div className='cartproduct_image'>
                                 <img src={product.image} alt={product.title} />
                                 </div>
@@ -95,7 +100,7 @@ function Header() {
                 {
                     !!cartproducts === true && cartproducts.length >0 && (
                         <div className='amount_pay'>
-                            <div><p>Total amount : $<span className='total_amount_cart'>{Totalprice.toFixed(2)}  </span></p></div>
+                            <div><p>Total amount : $<span className='total_amount_cart'>{Totalprice && Totalprice.toFixed(2)}  </span></p></div>
                             <div><span className='add_to_cart_button_pay'>Pay now</span></div>
                         </div>
                         )

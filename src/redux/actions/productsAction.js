@@ -35,3 +35,10 @@ export const decrementcartitem = (product) => {
         payload:product
     }
 }
+
+export const removecartitem = (product) => {
+    return {
+        type:ActionTypes.REMOVE_CART_ITEM,
+        payload:product
+    }
+}

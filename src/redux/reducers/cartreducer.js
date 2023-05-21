@@ -63,7 +63,16 @@ const cartreducer = (state=initialState,{type, payload}) => {
                         }
                     }
                     
-                    
+                case ActionTypes.REMOVE_CART_ITEM: 
+                var leftproduct = state.cartproducts.filter(item => item.id !== payload.id);
+                if(leftproduct.length > 0){
+                    return {
+                        cartproducts : [...leftproduct]
+                    }
+                }
+                return {
+                    cartproducts : []
+                 }
 
             default: 
             return state
