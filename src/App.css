@@ -227,6 +227,7 @@
   position: relative;
   height: 90vh;
   width: 100%;
+  z-index: -1;
   background-image: linear-gradient(to right, #e4e4ec , #7fb4f2);
 }
 .signup_form_wrapper{
