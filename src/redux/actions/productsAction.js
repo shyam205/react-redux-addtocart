@@ -42,3 +42,24 @@ export const removecartitem = (product) => {
         payload:product
     }
 }
+
+export const userlogin = (payload) => {
+    return {
+        type:ActionTypes.LOGIN_USER,
+        payload:payload
+    }
+}
+
+
+export const userlogout = (payload) => {
+    return {
+        type:ActionTypes.LOGOUT_USER,
+        payload:payload
+    }
+}
+
+export const removeerror = () => {
+    return {
+        type:ActionTypes.REMOVE_ERROR,
+    }
+}

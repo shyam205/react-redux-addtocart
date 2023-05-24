@@ -33,6 +33,11 @@
   display: flex;
   align-items: center;
 }
+.cart_icon_number{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .infoheader{
   padding: 12px 0 12px 0;
   text-align: center;
@@ -163,7 +168,6 @@
 }
 .header_cart_box{
   position: fixed;
-  width: 460px;
   background-color: white;
   height: 100vh;
   top: 0;
@@ -228,7 +232,7 @@
   position: relative;
   height: 90vh;
   width: 100%;
-  z-index: -1;
+  z-index: 0;
   background-image: linear-gradient(to right, #e4e4ec , #7fb4f2);
 }
 .signup_form_wrapper{
@@ -333,4 +337,38 @@
 .remove_cart_item p{
   cursor: pointer;
   width: max-content;
+}
+.login_button{
+  padding: 13px 40px;
+    background-color: white;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 1s all linear;
+}
+.login_button:hover{
+  background-color: rgb(139, 147, 242);
+}
+.login_button_container{
+  text-align: center;
+}
+.logout_button{
+  display: inline-block;
+  color: white;
+  cursor: pointer;
+}
+.logout_button:hover{
+  color: blue;
+}
+.wrong_cred{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.wrong_cred p{
+  padding:10px 20px;
+  background-color: rgb(236, 187, 119);
+  width: max-content;
+  font-weight: 600;
 }
