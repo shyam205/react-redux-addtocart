@@ -50,13 +50,13 @@ function Header() {
         </div>
         <div className='cart'>
         <div className='auth_button'>
-            {user?.isAuthenticate == false && user?.isloggedin == false  &&
+            {user && user?.isAuthenticate == false && user?.isloggedin == false  &&
             <>
             <Link to='/login'>Login</Link>
             <Link to='/signup'>Signup</Link>
             </>
            }
-           {user?.isAuthenticate == true && user?.isloggedin == true  &&
+           {user && user?.isAuthenticate == true && user?.isloggedin == true  &&
             <>
              <span className='logout_button' onClick={() => handleLogOut("logout")}>Logout</span>
             </>
